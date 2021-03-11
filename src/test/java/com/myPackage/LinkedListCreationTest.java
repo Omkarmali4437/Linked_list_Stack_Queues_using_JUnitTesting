@@ -30,4 +30,13 @@ public class LinkedListCreationTest {
         list.insertatFirst(56);
         list.display();
     }
+
+    @Test
+    public void insert_at_back()
+    {
+        list.insertatBack(56);
+        list.insertatBack(30);
+        list.insertatBack(70);
+        list.display();
+    }
 }

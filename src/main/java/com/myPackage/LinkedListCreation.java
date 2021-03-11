@@ -48,6 +48,21 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
+    public void insertatBack(T data)
+    {
+        Node newnode=new Node(data);
+        if(head==null)
+        {
+            head=newnode;
+            tail=newnode;
+        }
+        else
+        {
+            tail.next=newnode;
+            tail=newnode;
+        }
+    }
+
     public void display()
     {
         Node current=head;
