@@ -32,6 +32,22 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
+    public void insertatFirst(T data)
+    {
+        Node newnode1=new Node(data);
+        if(head==null)
+        {
+            head=newnode1;
+            tail=newnode1;
+        }
+        else
+        {
+            Node node1=head;
+            head=newnode1;
+            head.next=node1;
+        }
+    }
+
     public void display()
     {
         Node current=head;
@@ -54,4 +70,5 @@ public class LinkedListCreation<T extends Comparable<T>> {
             System.out.println("List size is: "+size);
         }
     }
+
 }

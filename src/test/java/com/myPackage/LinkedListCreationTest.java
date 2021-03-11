@@ -21,4 +21,13 @@ public class LinkedListCreationTest {
         list.addValue(70);
         list.display();
     }
+
+    @Test
+    public void insert_at_first()
+    {
+        list.insertatFirst(70);
+        list.insertatFirst(30);
+        list.insertatFirst(56);
+        list.display();
+    }
 }
