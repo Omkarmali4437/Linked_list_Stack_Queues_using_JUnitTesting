@@ -63,6 +63,29 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
+    public <T> Node insertatMid(T data, int position)
+    {
+        Node newnode2=new Node(data);
+        newnode2.data=data;
+        Node current=head;
+        Node oldNode=null;
+        int count=0;
+
+        while(count<position)
+        {
+            oldNode=current;
+            current=current.next;
+            count++;
+        }
+        newnode2.next=current;
+        while(oldNode != null)
+        {
+            oldNode.next=newnode2;
+            return head;
+        }
+        return newnode2;
+    }
+
     public void display()
     {
         Node current=head;

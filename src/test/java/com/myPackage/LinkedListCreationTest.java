@@ -39,4 +39,15 @@ public class LinkedListCreationTest {
         list.insertatBack(70);
         list.display();
     }
+
+    @Test
+    public void insert_at_middle()
+    {
+        list.addValue(56);
+        list.addValue(70);
+        list.display();
+        System.out.println("After insert in between");
+        list.insertatMid(30,1);
+        list.display();
+    }
 }
