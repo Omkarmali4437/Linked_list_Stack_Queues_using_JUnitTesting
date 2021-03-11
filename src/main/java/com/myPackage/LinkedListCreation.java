@@ -172,6 +172,20 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
+    public T insertAfterNode(Node previous,T data)
+    {
+        if(previous == null)
+        {
+            System.out.println("Previous node cannot be empty");
+            return null;
+        }
+
+        Node newnode3=new Node(data);
+        newnode3.next=previous.next;
+        previous.next=newnode3;
+        return (T)newnode3.data;
+    }
+
 
     public void display()
     {

@@ -85,4 +85,17 @@ public class LinkedListCreationTest {
         int result= (int)list.searchNode(30);
         Assert.assertEquals(30,result);
     }
+
+    @Test
+    public void insert_after_given_node()
+    {
+        list.addValue(56);
+        list.addValue(30);
+        list.addValue(70);
+        list.display();
+        System.out.println("Insertinng after 30");
+        int result=(int)list.insertAfterNode(list.head.next,40);
+        list.display();
+        Assert.assertEquals(40,result);
+    }
 }
