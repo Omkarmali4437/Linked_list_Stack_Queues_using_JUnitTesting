@@ -12,25 +12,33 @@ public class StackQueuesTest {
     }
 
     @Test
-    public void push_at_back()
+    public void push_at_front()
     {
-        stackqueue.push(56);
-        stackqueue.push(30);
-        stackqueue.push(70);
+        stackqueue.stack_Push(70);
+        stackqueue.stack_Push(30);
+        stackqueue.stack_Push(56);
     }
 
     @Test
     public void pop_at_front()
     {
         int i=0;
-        stackqueue.push(56);
-        stackqueue.push(30);
-        stackqueue.push(70);
+        stackqueue.stack_Push(70);
+        stackqueue.stack_Push(30);
+        stackqueue.stack_Push(56);
         System.out.println("After deleting");
         while(i < 3)
         {
-            stackqueue.pop();
+            stackqueue.stack_Pop();
             i++;
         }
+    }
+
+    @Test
+    public void push_at_back()
+    {
+        stackqueue.queue_push(56);
+        stackqueue.queue_push(30);
+        stackqueue.queue_push(70);
     }
 }
