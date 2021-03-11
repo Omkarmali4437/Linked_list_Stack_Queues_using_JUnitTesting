@@ -112,4 +112,17 @@ public class LinkedListCreationTest {
         list.display();
         Assert.assertEquals(30,result);
     }
+
+    @Test
+    public void to_sort_list_in_ascending_order()
+    {
+        list.addValue(56);
+        list.addValue(30);
+        list.addValue(40);
+        list.addValue(70);
+        list.display();
+        System.out.println("After sorting");
+        list.sortList();
+        list.display();
+    }
 }
