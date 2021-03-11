@@ -20,4 +20,10 @@ public class StackQueues<T extends Comparable> {
         this.listCreation.insertatBack(value);
         this.listCreation.display();
     }
+
+    public void queue_pop()
+    {
+        this.listCreation.popFirst();
+        this.listCreation.display();
+    }
 }
