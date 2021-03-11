@@ -50,4 +50,16 @@ public class LinkedListCreationTest {
         list.insertatMid(30,1);
         list.display();
     }
+
+    @Test
+    public void pop_first()
+    {
+        list.addValue(56);
+        list.addValue(30);
+        list.addValue(70);
+        list.display();
+        System.out.println("After deleting first element");
+        list.popFirst();
+        list.display();
+    }
 }
