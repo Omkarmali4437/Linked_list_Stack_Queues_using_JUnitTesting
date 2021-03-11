@@ -11,7 +11,7 @@ public class StackQueues<T extends Comparable> {
 
     public void stack_Pop()
     {
-        this.listCreation.popLast();
+        this.listCreation.popFirst();
         this.listCreation.display();
     }
 
