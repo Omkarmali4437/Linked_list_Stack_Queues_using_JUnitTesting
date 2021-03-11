@@ -74,4 +74,15 @@ public class LinkedListCreationTest {
         list.popLast();
         list.display();
     }
+
+    @Test
+    public void search_node()
+    {
+        list.addValue(56);
+        list.addValue(30);
+        list.addValue(70);
+        list.display();
+        int result= (int)list.searchNode(30);
+        Assert.assertEquals(30,result);
+    }
 }

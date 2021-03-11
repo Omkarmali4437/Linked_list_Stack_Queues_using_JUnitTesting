@@ -132,6 +132,47 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
+    public T searchNode(T data)
+    {
+        Node ptr=head;
+        int i=0;
+        boolean flag=false;
+        if(ptr == null)
+        {
+            System.out.println("List empty");
+            return null;
+        }
+        else
+        {
+            while(ptr != null)
+            {
+                if(ptr.data==data)
+                {
+                    //return (int)ptr.data;
+                    flag=true;
+                    break;
+                }
+                else
+                {
+                    flag=false;
+                }
+                i++;
+                ptr=ptr.next;
+            }
+            if(flag)
+            {
+                System.out.println(data+" node found at: "+i+"\n");
+                return (T)ptr.data;
+            }
+            else
+            {
+                System.out.println(data+" node not present in list");
+                return null;
+            }
+        }
+    }
+
+
     public void display()
     {
         Node current=head;
