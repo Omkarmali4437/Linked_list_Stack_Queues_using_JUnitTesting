@@ -62,4 +62,16 @@ public class LinkedListCreationTest {
         list.popFirst();
         list.display();
     }
+
+    @Test
+    public void pop_last()
+    {
+        list.addValue(56);
+        list.addValue(30);
+        list.addValue(70);
+        list.display();
+        System.out.println("After deleting last element");
+        list.popLast();
+        list.display();
+    }
 }

@@ -106,6 +106,32 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
+    public void popLast()
+    {
+        if (head == null)
+        {
+            System.out.println("List is Empty");
+            return;
+        }
+        else
+        {
+            if (head != tail)
+            {
+                Node<T> current = head;
+                while(current.next != tail)
+                {
+                    current = current.next;
+                }
+                tail = current;
+                tail.next = null;
+            }
+            else
+            {
+                head = tail = null;
+            }
+        }
+    }
+
     public void display()
     {
         Node current=head;
