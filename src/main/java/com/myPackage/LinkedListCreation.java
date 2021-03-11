@@ -186,6 +186,28 @@ public class LinkedListCreation<T extends Comparable<T>> {
         return (T)newnode3.data;
     }
 
+    public T  deleteafteraGivennode(T key)
+    {
+        Node temp=head;
+        Node previous=null;
+
+        if(temp != head && temp.data==key)
+        {
+            head=temp.next;
+            return null;
+        }
+        while(temp != null && temp.data != key)
+        {
+            previous=temp;
+            temp=temp.next;
+        }
+        if(temp == null)
+        {
+            return null;
+        }
+        previous.next=temp.next;
+        return (T)previous.data;
+    }
 
     public void display()
     {

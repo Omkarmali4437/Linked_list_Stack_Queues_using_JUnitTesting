@@ -98,4 +98,18 @@ public class LinkedListCreationTest {
         list.display();
         Assert.assertEquals(40,result);
     }
+
+    @Test
+    public void delete_after_given_node()
+    {
+        list.addValue(56);
+        list.addValue(30);
+        list.addValue(40);
+        list.addValue(70);
+        list.display();
+        System.out.println("After deleting");
+        int result=(int)list.deleteafteraGivennode(40);
+        list.display();
+        Assert.assertEquals(30,result);
+    }
 }
