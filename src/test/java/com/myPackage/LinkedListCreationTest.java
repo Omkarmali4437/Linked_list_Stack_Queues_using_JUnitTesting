@@ -20,6 +20,11 @@ public class LinkedListCreationTest {
         list.addValue(30);
         list.addValue(70);
         list.display();
+
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -29,6 +34,11 @@ public class LinkedListCreationTest {
         list.insertatFirst(30);
         list.insertatFirst(56);
         list.display();
+
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -38,6 +48,11 @@ public class LinkedListCreationTest {
         list.insertatBack(30);
         list.insertatBack(70);
         list.display();
+
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -49,6 +64,11 @@ public class LinkedListCreationTest {
         System.out.println("After insert in between");
         list.insertatMid(30,1);
         list.display();
+
+        boolean result = list.head.getKey().equals(56) &&
+                list.head.next.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -61,6 +81,10 @@ public class LinkedListCreationTest {
         System.out.println("After deleting first element");
         list.popFirst();
         list.display();
+
+        boolean result = list.head.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -73,6 +97,10 @@ public class LinkedListCreationTest {
         System.out.println("After deleting last element");
         list.popLast();
         list.display();
+
+        boolean result = list.head.getKey().equals(56) &&
+                list.tail.getKey().equals(30);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -124,5 +152,9 @@ public class LinkedListCreationTest {
         System.out.println("After sorting");
         list.sortList();
         list.display();
+
+        boolean result = list.head.getKey().equals(30) &&
+                list.tail.getKey().equals(70);
+        Assert.assertTrue(result);
     }
 }

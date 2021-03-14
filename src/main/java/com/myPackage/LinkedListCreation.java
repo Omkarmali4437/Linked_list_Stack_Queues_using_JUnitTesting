@@ -2,6 +2,14 @@ package com.myPackage;
 
 public class LinkedListCreation<T extends Comparable<T>> {
 
+    public Node getHead() {
+        return head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
     class Node<T>
     {
         T data;
@@ -11,6 +19,23 @@ public class LinkedListCreation<T extends Comparable<T>> {
         {
             this.data=data;
             this.next=next;
+        }
+
+        public T getKey() {
+            return data;
+        }
+
+        public void setKey(T data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+
+            this.next = (Node) next;
         }
     }
 
@@ -32,7 +57,7 @@ public class LinkedListCreation<T extends Comparable<T>> {
         }
     }
 
-    public void insertatFirst(T data)
+    public T insertatFirst(T data)
     {
         Node newnode1=new Node(data);
         if(head==null)
@@ -46,9 +71,10 @@ public class LinkedListCreation<T extends Comparable<T>> {
             head=newnode1;
             head.next=node1;
         }
+        return (T) head.data;
     }
 
-    public void insertatBack(T data)
+    public T insertatBack(T data)
     {
         Node newnode=new Node(data);
         if(head==null)
@@ -61,6 +87,7 @@ public class LinkedListCreation<T extends Comparable<T>> {
             tail.next=newnode;
             tail=newnode;
         }
+        return (T) tail.data;
     }
 
     public <T> Node insertatMid(T data, int position)
@@ -240,7 +267,7 @@ public class LinkedListCreation<T extends Comparable<T>> {
     }
 
 
-    public void display()
+    public T display()
     {
         Node current=head;
         int size=0;
@@ -248,7 +275,7 @@ public class LinkedListCreation<T extends Comparable<T>> {
         if(head==null)
         {
             System.out.println("List is Empty");
-            return;
+            return null;
         }
         else
         {
@@ -259,8 +286,10 @@ public class LinkedListCreation<T extends Comparable<T>> {
                 size++;
                 current=current.next;
             }
-            System.out.println("List size is: "+size);
+            return (T)tail.data;
+            //System.out.println("List size is: "+size);
         }
+        //return (T)tail.data;
     }
 
 }
