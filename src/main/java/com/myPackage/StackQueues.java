@@ -2,17 +2,15 @@ package com.myPackage;
 
 
 public class StackQueues<T extends Comparable> {
-    public LinkedListCreation.Node head;
-    public LinkedListCreation.Node tail;
 
     LinkedListCreation listCreation=new LinkedListCreation();
 
-    public LinkedListCreation.Node getHead() {
-        return head;
+    public Object getHead(){
+        return listCreation.head.getKey();
     }
 
-    public LinkedListCreation.Node getTail() {
-        return tail;
+    public Object getTail(){
+        return listCreation.tail.getKey();
     }
 
     public void stack_Push(T value)

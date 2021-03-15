@@ -18,6 +18,10 @@ public class StackQueuesTest {
         stackqueue.stack_Push(70);
         stackqueue.stack_Push(30);
         stackqueue.stack_Push(56);
+
+        boolean result = stackqueue.getHead().equals(56) &&
+                stackqueue.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -28,6 +32,10 @@ public class StackQueuesTest {
         stackqueue.stack_Push(56);
         System.out.println("After deleting");
         stackqueue.stack_Pop();
+
+        boolean result = stackqueue.getHead().equals(30) &&
+                stackqueue.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -36,6 +44,10 @@ public class StackQueuesTest {
         stackqueue.queue_push(56);
         stackqueue.queue_push(30);
         stackqueue.queue_push(70);
+
+        boolean result = stackqueue.getHead().equals(56) &&
+                stackqueue.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -47,5 +59,9 @@ public class StackQueuesTest {
         stackqueue.queue_push(70);
         System.out.println("After deleting");
         stackqueue.queue_pop();
+
+        boolean result = stackqueue.getHead().equals(30) &&
+                stackqueue.getTail().equals(70);
+        Assert.assertTrue(result);
     }
 }
